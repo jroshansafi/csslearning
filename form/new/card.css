@@ -1,0 +1,65 @@
+html {
+    font-size: 62.5%;
+}
+
+body{
+   font-family: 'Inter', Arial, Helvetica, sans-serif;
+   line-height: 1.5;
+}
+
+.card {
+max-width: 500px;
+background: #fff;
+box-shadow: 0 0 20 30 #f9f9f9;
+border-radius: 30px;
+font-size: 2rem;
+font-weight: 600;
+margin: 0 2rem;
+transform: rotate(-5deg);
+transition: transform 0.2s;
+overflow: hidden;
+}
+
+.card-content{ 
+    margin: 0;
+}
+
+.card-content, .card-footer {
+    padding: 2rem;
+}
+.card-footer{
+    color: #fff;
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    background: rgb(92, 191, 187);
+    background: linear-gradient(90deg, rgba(92, 191, 187, 1) 0%, rgba(116, 214, 144, 1) 100%);
+}
+
+.thumb {
+    border-radius: 100%;
+    width: 60px;
+    height: 60px;
+    border: 4px solid #fff;
+    margin: 2rem;
+    transition: transform .3s;  
+}
+
+.card:hover .thumb {
+    transform: scale(1.15)
+}
+
+.card:hover {
+    transform: rotate(0);
+} 
+  /* On mobile, we have less space so we need to use a smaller value for horizontal padding. 
+  On tablets and wider screens, I've increased the horizontal padding. */
+  
+  @media screen and (min-width: 768px) {
+    .card-content {
+      padding: 4rem;
+    }
+    .card footer {
+      padding: 2rem 4rem;
+    }
+  }
